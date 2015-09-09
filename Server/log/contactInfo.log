@@ -1,0 +1,460 @@
+2015-07-17 12:45:26,447 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\database-mysql.properties]
+2015-07-17 12:45:26,447 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\amqp-source.properties]
+2015-07-17 12:45:40,448 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 12:45:40,456 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 12:45:40,472 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 12:45:40,472 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 12:45:41,065 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 12:45:41,065 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 12:45:41,081 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-17 12:45:41,097 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 12:45:41,097 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:102) [ERROR] - Dangling meta character '+' near index 0
++84
+^
+java.util.regex.PatternSyntaxException: Dangling meta character '+' near index 0
++84
+^
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.sequence(Pattern.java:2123)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at java.lang.String.replaceFirst(String.java:2166)
+	at com.viettel.synccontact.manager.SyncProcess.replaceAll(SyncProcess.java:324)
+	at com.viettel.synccontact.manager.SyncProcess.changePrefix(SyncProcess.java:304)
+	at com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:281)
+	at com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:95)
+	at com.viettel.mmserver.base.ProcessThread.run(ProcessThread.java:126)
+	at java.lang.Thread.run(Thread.java:745)
+2015-07-17 12:46:01,640 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 12:46:01,645 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 12:46:01,647 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 12:46:01,647 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 12:46:01,756 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 12:46:01,756 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 12:46:01,772 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-17 12:46:01,772 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 12:46:01,772 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:102) [ERROR] - Dangling meta character '+' near index 0
++84
+^
+java.util.regex.PatternSyntaxException: Dangling meta character '+' near index 0
++84
+^
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.sequence(Pattern.java:2123)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at java.lang.String.replaceFirst(String.java:2166)
+	at com.viettel.synccontact.manager.SyncProcess.replaceAll(SyncProcess.java:324)
+	at com.viettel.synccontact.manager.SyncProcess.changePrefix(SyncProcess.java:304)
+	at com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:281)
+	at com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:95)
+	at com.viettel.mmserver.base.ProcessThread.run(ProcessThread.java:126)
+	at java.lang.Thread.run(Thread.java:745)
+2015-07-17 12:46:41,313 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\database-mysql.properties]
+2015-07-17 12:46:41,313 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\amqp-source.properties]
+2015-07-17 12:46:47,012 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 12:46:47,021 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 12:46:47,037 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 12:46:47,037 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 12:46:58,209 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 12:46:58,209 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 12:46:58,241 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-17 12:46:58,241 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 12:47:19,742 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:102) [ERROR] - Dangling meta character '+' near index 0
++84
+^
+java.util.regex.PatternSyntaxException: Dangling meta character '+' near index 0
++84
+^
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.sequence(Pattern.java:2123)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at java.lang.String.replaceFirst(String.java:2166)
+	at com.viettel.synccontact.manager.SyncProcess.replaceAll(SyncProcess.java:324)
+	at com.viettel.synccontact.manager.SyncProcess.changePrefix(SyncProcess.java:304)
+	at com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:281)
+	at com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:95)
+	at com.viettel.mmserver.base.ProcessThread.run(ProcessThread.java:126)
+	at java.lang.Thread.run(Thread.java:745)
+2015-07-17 12:47:55,737 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 12:47:55,748 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 12:47:55,749 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 12:47:55,749 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 12:47:55,905 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 12:47:55,905 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 12:47:55,936 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-17 12:47:55,936 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 12:47:59,237 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:102) [ERROR] - No value supplied for the SQL parameter 'id': Invalid property 'id' of bean class [vt.vms.object.ListContact]: Bean property 'id' is not readable or has an invalid getter method: Does the return type of the getter match the parameter type of the setter?
+org.springframework.dao.InvalidDataAccessApiUsageException: No value supplied for the SQL parameter 'id': Invalid property 'id' of bean class [vt.vms.object.ListContact]: Bean property 'id' is not readable or has an invalid getter method: Does the return type of the getter match the parameter type of the setter?
+	at org.springframework.jdbc.core.namedparam.NamedParameterUtils.buildValueArray(NamedParameterUtils.java:331)
+	at org.springframework.jdbc.core.namedparam.NamedParameterBatchUpdateUtils$1.setValues(NamedParameterBatchUpdateUtils.java:45)
+	at org.springframework.jdbc.core.JdbcTemplate$4.doInPreparedStatement(JdbcTemplate.java:893)
+	at org.springframework.jdbc.core.JdbcTemplate$4.doInPreparedStatement(JdbcTemplate.java:1)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:587)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:615)
+	at org.springframework.jdbc.core.JdbcTemplate.batchUpdate(JdbcTemplate.java:884)
+	at org.springframework.jdbc.core.namedparam.NamedParameterBatchUpdateUtils.executeBatchUpdateWithNamedParameters(NamedParameterBatchUpdateUtils.java:40)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.batchUpdate(NamedParameterJdbcTemplate.java:303)
+	at com.viettel.synccontact.jdbc.JdbcService.updateChangePrefix(JdbcService.java:192)
+	at com.viettel.synccontact.manager.SyncProcess.changePrefix(SyncProcess.java:308)
+	at com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:281)
+	at com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:95)
+	at com.viettel.mmserver.base.ProcessThread.run(ProcessThread.java:126)
+	at java.lang.Thread.run(Thread.java:745)
+2015-07-17 12:48:10,311 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 12:48:10,312 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 12:48:10,312 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 12:48:10,312 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 12:48:10,453 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 12:48:10,453 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 12:48:10,469 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-17 12:48:10,469 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 12:48:48,491 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\database-mysql.properties]
+2015-07-17 12:48:48,491 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\amqp-source.properties]
+2015-07-17 12:49:02,344 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 12:49:02,353 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 12:49:02,353 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 12:49:02,353 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 12:49:02,744 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 12:49:02,744 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 12:49:02,744 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-17 12:49:02,759 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 12:49:02,806 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:97) [INFO ] - -----------------end 69628-----------------
+2015-07-17 12:49:09,989 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 12:49:09,992 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 12:49:09,992 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 12:49:09,992 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 12:49:10,477 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 12:49:10,477 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 12:49:10,477 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:0 phone number.
+2015-07-17 12:49:10,477 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 12:49:12,910 jdbc.JdbcService [Send message] com.viettel.synccontact.jdbc.JdbcService.getListContactForChangePrefix(JdbcService.java:184) [ERROR] - getListContactForChangePrefix fail:
+java.lang.NullPointerException
+	at com.viettel.synccontact.jdbc.JdbcService.getListContactForChangePrefix(JdbcService.java:179)
+	at com.viettel.synccontact.manager.SyncProcess.changePrefix(SyncProcess.java:290)
+	at com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:281)
+	at com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:95)
+	at com.viettel.mmserver.base.ProcessThread.run(ProcessThread.java:126)
+	at java.lang.Thread.run(Thread.java:745)
+2015-07-17 12:49:22,177 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:102) [ERROR] - 
+java.lang.NullPointerException
+	at com.viettel.synccontact.manager.SyncProcess.replaceAll(SyncProcess.java:321)
+	at com.viettel.synccontact.manager.SyncProcess.changePrefix(SyncProcess.java:304)
+	at com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:281)
+	at com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:95)
+	at com.viettel.mmserver.base.ProcessThread.run(ProcessThread.java:126)
+	at java.lang.Thread.run(Thread.java:745)
+2015-07-17 12:49:24,440 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 12:49:24,452 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 12:49:24,452 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 12:49:24,452 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 12:49:24,593 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 12:49:24,593 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 12:49:24,608 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-17 12:49:24,608 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 12:49:25,968 jdbc.JdbcService [Send message] com.viettel.synccontact.jdbc.JdbcService.getListContactForChangePrefix(JdbcService.java:184) [ERROR] - getListContactForChangePrefix fail:
+java.lang.NullPointerException
+	at com.viettel.synccontact.jdbc.JdbcService.getListContactForChangePrefix(JdbcService.java:179)
+	at com.viettel.synccontact.manager.SyncProcess.changePrefix(SyncProcess.java:290)
+	at com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:281)
+	at com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:95)
+	at com.viettel.mmserver.base.ProcessThread.run(ProcessThread.java:126)
+	at java.lang.Thread.run(Thread.java:745)
+2015-07-17 12:55:24,466 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\database-mysql.properties]
+2015-07-17 12:55:24,466 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\amqp-source.properties]
+2015-07-17 12:56:23,640 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 12:56:23,648 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 12:56:23,648 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 12:56:23,648 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 12:56:24,055 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 12:56:24,055 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 12:56:24,055 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:0 phone number.
+2015-07-17 12:56:24,055 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 12:56:24,055 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:97) [INFO ] - -----------------end 69628-----------------
+2015-07-17 12:58:41,082 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 12:58:41,082 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 12:58:41,084 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 12:58:41,084 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 12:58:41,428 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 12:58:41,428 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 12:58:41,459 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-17 12:58:41,459 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 12:58:41,459 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:97) [INFO ] - -----------------end 69628-----------------
+2015-07-17 12:59:15,488 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 12:59:15,499 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 12:59:15,500 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 12:59:15,500 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 12:59:15,625 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 12:59:15,625 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 12:59:15,640 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-17 12:59:15,640 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 12:59:27,324 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:97) [INFO ] - -----------------end 69628-----------------
+2015-07-17 12:59:30,011 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 12:59:30,012 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 12:59:30,013 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 12:59:30,013 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 12:59:30,154 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 12:59:30,154 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 12:59:30,170 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-17 12:59:30,170 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 13:00:25,252 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\database-mysql.properties]
+2015-07-17 13:00:25,268 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\amqp-source.properties]
+2015-07-17 13:00:31,010 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 13:00:31,017 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 13:00:31,017 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 13:00:31,017 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 13:00:31,423 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 13:00:31,423 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 13:00:31,439 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-17 13:00:31,439 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 13:00:31,486 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:97) [INFO ] - -----------------end 69628-----------------
+2015-07-17 13:06:09,073 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\database-mysql.properties]
+2015-07-17 13:06:09,073 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\amqp-source.properties]
+2015-07-17 13:06:15,694 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 13:06:15,709 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 13:06:15,709 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 13:06:15,709 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 13:06:16,100 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 13:06:16,100 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 13:06:16,115 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:1 phone number.
+2015-07-17 13:06:16,115 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 13:07:02,344 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:97) [INFO ] - -----------------end 69628-----------------
+2015-07-17 13:07:04,782 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 13:07:04,794 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 13:07:04,794 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 13:07:04,794 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 13:07:04,981 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 13:07:04,981 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 13:07:04,997 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:1 phone number.
+2015-07-17 13:07:04,997 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 13:08:49,653 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\database-mysql.properties]
+2015-07-17 13:08:49,653 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\amqp-source.properties]
+2015-07-17 13:08:56,572 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 13:08:56,588 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 13:08:56,588 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 13:08:56,588 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 13:08:57,042 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 13:08:57,042 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 13:08:57,057 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-17 13:08:57,057 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 13:09:11,674 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:97) [INFO ] - -----------------end 69628-----------------
+2015-07-17 13:09:20,572 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 13:09:20,580 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 13:09:20,581 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 13:09:20,581 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 13:09:20,722 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 13:09:20,722 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 13:09:20,722 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:0 phone number.
+2015-07-17 13:09:20,722 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 13:09:20,722 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:97) [INFO ] - -----------------end 69628-----------------
+2015-07-17 13:09:30,676 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 13:09:30,685 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 13:09:30,685 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 13:09:30,685 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 13:09:30,810 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 13:09:30,810 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 13:09:30,826 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-17 13:09:30,826 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 13:09:30,826 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:97) [INFO ] - -----------------end 69628-----------------
+2015-07-17 13:09:47,935 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 13:09:47,936 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 13:09:47,936 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 13:09:47,936 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 13:09:48,061 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 13:09:48,061 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 13:09:48,092 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-17 13:09:48,092 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 13:10:52,836 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\database-mysql.properties]
+2015-07-17 13:10:52,836 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\amqp-source.properties]
+2015-07-17 13:10:59,869 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 13:10:59,879 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 13:10:59,879 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 13:10:59,879 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 13:11:00,316 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 13:11:00,316 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 13:11:00,332 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-17 13:11:00,332 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 13:38:43,249 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\database-mysql.properties]
+2015-07-17 13:38:43,249 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\amqp-source.properties]
+2015-07-17 13:38:50,366 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 13:38:50,373 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 13:38:50,373 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 13:38:50,373 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 13:38:50,802 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 13:38:50,802 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 13:38:50,818 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-17 13:38:50,818 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 13:38:50,884 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:97) [INFO ] - -----------------end 69628-----------------
+2015-07-17 13:38:56,324 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 13:38:56,328 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 13:38:56,330 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 13:38:56,330 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 13:38:56,818 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 13:38:56,818 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 13:38:56,818 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:0 phone number.
+2015-07-17 13:38:56,834 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 13:38:56,911 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:97) [INFO ] - -----------------end 69628-----------------
+2015-07-17 13:39:15,975 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 13:39:15,976 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 13:39:15,976 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 13:39:15,976 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 13:39:16,095 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 13:39:16,095 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 13:39:16,095 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:0 phone number.
+2015-07-17 13:39:16,095 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 13:39:16,178 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:97) [INFO ] - -----------------end 69628-----------------
+2015-07-17 13:54:01,936 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 13:54:01,949 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 13:54:01,949 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 13:54:01,949 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 13:54:02,074 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 13:54:02,074 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 13:54:02,090 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:0 phone number.
+2015-07-17 13:54:02,090 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 13:54:02,121 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:97) [INFO ] - -----------------end 69628-----------------
+2015-07-17 14:04:03,605 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 47052-----------------
+2015-07-17 14:04:03,620 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 47052 is 3
+2015-07-17 14:04:03,621 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 47052 has 3 contact valid
+2015-07-17 14:04:03,621 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 14:04:03,621 jdbc.JdbcService [Send message] com.viettel.synccontact.jdbc.JdbcService.checkExists(JdbcService.java:82) [ERROR] - checkExists contact fail:
+org.springframework.dao.EmptyResultDataAccessException: Incorrect result size: expected 1, actual 0
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:71)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.queryForObject(NamedParameterJdbcTemplate.java:179)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.queryForObject(NamedParameterJdbcTemplate.java:191)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.queryForLong(NamedParameterJdbcTemplate.java:209)
+	at com.viettel.synccontact.jdbc.JdbcService.checkExists(JdbcService.java:79)
+	at com.viettel.synccontact.jdbc.JdbcService.insertContact(JdbcService.java:47)
+	at com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:255)
+	at com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:95)
+	at com.viettel.mmserver.base.ProcessThread.run(ProcessThread.java:126)
+	at java.lang.Thread.run(Thread.java:745)
+2015-07-17 14:04:03,730 jdbc.JdbcService [Send message] com.viettel.synccontact.jdbc.JdbcService.checkExists(JdbcService.java:82) [ERROR] - checkExists contact fail:
+org.springframework.dao.EmptyResultDataAccessException: Incorrect result size: expected 1, actual 0
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:71)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.queryForObject(NamedParameterJdbcTemplate.java:179)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.queryForObject(NamedParameterJdbcTemplate.java:191)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.queryForLong(NamedParameterJdbcTemplate.java:209)
+	at com.viettel.synccontact.jdbc.JdbcService.checkExists(JdbcService.java:79)
+	at com.viettel.synccontact.jdbc.JdbcService.insertContact(JdbcService.java:47)
+	at com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:255)
+	at com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:95)
+	at com.viettel.mmserver.base.ProcessThread.run(ProcessThread.java:126)
+	at java.lang.Thread.run(Thread.java:745)
+2015-07-17 14:04:03,933 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 14:04:03,933 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 14:04:03,949 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:277) [INFO ] - Remove Contact detail:5 phone number.
+2015-07-17 14:04:03,949 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact:0 contact.
+2015-07-17 14:04:03,965 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:97) [INFO ] - -----------------end 47052-----------------
+2015-07-17 14:37:11,789 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\database-mysql.properties]
+2015-07-17 14:37:11,789 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\amqp-source.properties]
+2015-07-17 14:52:35,157 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\database-mysql.properties]
+2015-07-17 14:52:35,157 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\amqp-source.properties]
+2015-07-17 14:53:08,819 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 14:53:08,832 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 14:53:08,832 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 14:53:08,832 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 14:53:09,222 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 14:53:09,222 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 14:53:09,269 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact detail:0 phone number.
+2015-07-17 14:53:09,269 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:282) [INFO ] - Remove Contact:0 contact.
+2015-07-17 14:53:09,269 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:97) [INFO ] - -----------------end 69628-----------------
+2015-07-17 14:53:26,642 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 14:53:26,649 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 14:53:26,649 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 14:53:26,649 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 14:53:26,759 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 14:53:26,759 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 14:53:26,852 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact detail:1 phone number.
+2015-07-17 14:53:26,852 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:282) [INFO ] - Remove Contact:0 contact.
+2015-07-17 14:53:26,931 jdbc.JdbcService [Send message] com.viettel.synccontact.jdbc.JdbcService.deleteContactForDelete(JdbcService.java:206) [ERROR] - getListContactForChangePrefix fail:
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ delete from sf_guard_contact_detail where id=: contactDetailId]; nested exception is java.sql.BatchUpdateException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ': contactDetailId' at line 1
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:233)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:603)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:615)
+	at org.springframework.jdbc.core.JdbcTemplate.batchUpdate(JdbcTemplate.java:884)
+	at org.springframework.jdbc.core.namedparam.NamedParameterBatchUpdateUtils.executeBatchUpdateWithNamedParameters(NamedParameterBatchUpdateUtils.java:40)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.batchUpdate(NamedParameterJdbcTemplate.java:303)
+	at com.viettel.synccontact.jdbc.JdbcService.deleteContactDetail(JdbcService.java:213)
+	at com.viettel.synccontact.jdbc.JdbcService.deleteContactForDelete(JdbcService.java:204)
+	at com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:283)
+	at com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:95)
+	at com.viettel.mmserver.base.ProcessThread.run(ProcessThread.java:126)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.BatchUpdateException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ': contactDetailId' at line 1
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:1819)
+	at com.mysql.jdbc.PreparedStatement.executeBatch(PreparedStatement.java:1281)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.springframework.jdbc.core.JdbcTemplate$4.doInPreparedStatement(JdbcTemplate.java:899)
+	at org.springframework.jdbc.core.JdbcTemplate$4.doInPreparedStatement(JdbcTemplate.java:1)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:587)
+	... 10 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ': contactDetailId' at line 1
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:1777)
+	... 16 more
+2015-07-17 14:53:26,931 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:97) [INFO ] - -----------------end 69628-----------------
+2015-07-17 14:53:57,086 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 14:53:57,088 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 14:53:57,088 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 14:53:57,088 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 14:53:57,245 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 14:53:57,245 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 14:55:50,756 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\database-mysql.properties]
+2015-07-17 14:55:50,756 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\amqp-source.properties]
+2015-07-17 14:55:51,553 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 14:55:51,562 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 14:55:51,562 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 14:55:51,562 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 14:55:51,969 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 14:55:51,969 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 14:55:57,618 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-17 14:55:57,633 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:282) [INFO ] - Remove Contact:0 contact.
+2015-07-17 14:55:57,633 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:97) [INFO ] - -----------------end 69628-----------------
+2015-07-17 14:56:15,962 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 14:56:15,966 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 14:56:15,967 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 14:56:15,967 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 14:56:16,107 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 14:56:16,107 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 14:57:18,935 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\database-mysql.properties]
+2015-07-17 14:57:18,935 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\amqp-source.properties]
+2015-07-17 14:57:32,342 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 14:57:32,345 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 14:57:32,345 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 14:57:32,345 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 14:57:32,953 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 14:57:32,953 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 14:57:45,878 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact detail:0 phone number.
+2015-07-17 14:57:45,894 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:282) [INFO ] - Remove Contact:0 contact.
+2015-07-17 14:57:45,895 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:97) [INFO ] - -----------------end 69628-----------------
+2015-07-17 14:57:54,433 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:93) [INFO ] - -----------------begin 69628-----------------
+2015-07-17 14:57:54,446 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:117) [INFO ] - Total contact of user 69628 is 3
+2015-07-17 14:57:54,447 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:248) [INFO ] - User 69628 has 3 contact valid
+2015-07-17 14:57:54,447 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:251) [INFO ] - insert Contact
+2015-07-17 14:57:54,588 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:274) [INFO ] - Insert database success 3 contact.
+2015-07-17 14:57:54,588 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:275) [INFO ] - Remove Duplicate Contact
+2015-07-17 14:57:54,635 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:280) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-17 14:57:54,635 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:282) [INFO ] - Remove Contact:0 contact.
+2015-07-17 14:57:54,635 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:97) [INFO ] - -----------------end 69628-----------------

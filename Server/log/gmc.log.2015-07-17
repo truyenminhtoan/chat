@@ -1,0 +1,33 @@
+2015-07-17 18:07:12,495 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\GCMPush\target\..\etc\properties\database-mysql.properties]
+2015-07-17 18:07:12,495 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\GCMPush\target\..\etc\properties\amqp-source.properties]
+2015-07-17 18:07:30,253 util.GCM [Send message] com.viettel.gcm.util.GCM.send(GCM.java:28) [INFO ] - sender id: AIzaSyDL___4P73JA0JLmrdyneeTQ4sHBhWr1Dg
+2015-07-17 18:08:15,721 util.GCM [Send message] com.viettel.gcm.util.GCM.send(GCM.java:40) [ERROR] - Error when send GCM: 
+java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:618)
+	at sun.security.ssl.BaseSSLSocketImpl.connect(BaseSSLSocketImpl.java:160)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:275)
+	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:371)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:932)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1091)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getOutputStream(HttpsURLConnectionImpl.java:250)
+	at com.google.android.gcm.server.Sender.post(Sender.java:479)
+	at com.google.android.gcm.server.Sender.post(Sender.java:458)
+	at com.google.android.gcm.server.Sender.sendNoRetry(Sender.java:170)
+	at com.google.android.gcm.server.Sender.send(Sender.java:121)
+	at com.viettel.gcm.util.GCM.send(GCM.java:37)
+	at com.viettel.gcm.manager.SendGCMProcess.process(SendGCMProcess.java:72)
+	at com.viettel.mmserver.base.ProcessThread.run(ProcessThread.java:126)
+	at java.lang.Thread.run(Thread.java:724)

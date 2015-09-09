@@ -1,0 +1,433 @@
+2015-07-16 12:49:46,166 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\database-mysql.properties]
+2015-07-16 12:49:46,173 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\amqp-source.properties]
+2015-07-16 12:53:52,355 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:87) [INFO ] - -----------------begin 69624-----------------
+2015-07-16 12:53:52,361 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:107) [INFO ] - Total contact of user 69624 is 3
+2015-07-16 12:53:52,361 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:204) [INFO ] - User 69624 has 3 contact valid
+2015-07-16 12:53:52,361 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:206) [INFO ] - insert Contact
+2015-07-16 12:53:52,876 jdbc.JdbcService [Send message] com.viettel.synccontact.jdbc.JdbcService.checkExists(JdbcService.java:74) [ERROR] - checkExists contact fail:
+org.springframework.dao.EmptyResultDataAccessException: Incorrect result size: expected 1, actual 0
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:71)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.queryForObject(NamedParameterJdbcTemplate.java:179)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.queryForObject(NamedParameterJdbcTemplate.java:191)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.queryForLong(NamedParameterJdbcTemplate.java:209)
+	at com.viettel.synccontact.jdbc.JdbcService.checkExists(JdbcService.java:71)
+	at com.viettel.synccontact.jdbc.JdbcService.insertContact(JdbcService.java:39)
+	at com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:210)
+	at com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:88)
+	at com.viettel.mmserver.base.ProcessThread.run(ProcessThread.java:126)
+	at java.lang.Thread.run(Thread.java:745)
+2015-07-16 12:53:53,251 jdbc.JdbcService [Send message] com.viettel.synccontact.jdbc.JdbcService.insertContactDetail(JdbcService.java:90) [ERROR] - insert contact detail fail:
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ insert into sf_guard_contact_detail (contact_id, phone, type, name_filter, user_id_filter, modify_time, status, log_id) values (8387911, ?, ?, ?, ?, NOW(), 1, 101)  ]; nested exception is java.sql.BatchUpdateException: Unknown column 'log_id' in 'field list'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:233)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:603)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:615)
+	at org.springframework.jdbc.core.JdbcTemplate.batchUpdate(JdbcTemplate.java:884)
+	at org.springframework.jdbc.core.namedparam.NamedParameterBatchUpdateUtils.executeBatchUpdateWithNamedParameters(NamedParameterBatchUpdateUtils.java:40)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.batchUpdate(NamedParameterJdbcTemplate.java:303)
+	at com.viettel.synccontact.jdbc.JdbcService.insertContactDetail(JdbcService.java:88)
+	at com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:217)
+	at com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:88)
+	at com.viettel.mmserver.base.ProcessThread.run(ProcessThread.java:126)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.BatchUpdateException: Unknown column 'log_id' in 'field list'
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:1819)
+	at com.mysql.jdbc.PreparedStatement.executeBatch(PreparedStatement.java:1281)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.springframework.jdbc.core.JdbcTemplate$4.doInPreparedStatement(JdbcTemplate.java:899)
+	at org.springframework.jdbc.core.JdbcTemplate$4.doInPreparedStatement(JdbcTemplate.java:1)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:587)
+	... 9 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'log_id' in 'field list'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:1777)
+	... 15 more
+2015-07-16 12:53:53,251 jdbc.JdbcService [Send message] com.viettel.synccontact.jdbc.JdbcService.insertContactDetail(JdbcService.java:91) [INFO ] - insert contact detail fail:[vt.vms.object.ContactVO@bfafa6]
+2015-07-16 12:53:53,314 jdbc.JdbcService [Send message] com.viettel.synccontact.jdbc.JdbcService.insertContactDetail(JdbcService.java:90) [ERROR] - insert contact detail fail:
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ insert into sf_guard_contact_detail (contact_id, phone, type, name_filter, user_id_filter, modify_time, status, log_id) values (8387911, ?, ?, ?, ?, NOW(), 1, 101)  ]; nested exception is java.sql.BatchUpdateException: Unknown column 'log_id' in 'field list'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:233)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:603)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:615)
+	at org.springframework.jdbc.core.JdbcTemplate.batchUpdate(JdbcTemplate.java:884)
+	at org.springframework.jdbc.core.namedparam.NamedParameterBatchUpdateUtils.executeBatchUpdateWithNamedParameters(NamedParameterBatchUpdateUtils.java:40)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.batchUpdate(NamedParameterJdbcTemplate.java:303)
+	at com.viettel.synccontact.jdbc.JdbcService.insertContactDetail(JdbcService.java:88)
+	at com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:217)
+	at com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:88)
+	at com.viettel.mmserver.base.ProcessThread.run(ProcessThread.java:126)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.BatchUpdateException: Unknown column 'log_id' in 'field list'
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:1819)
+	at com.mysql.jdbc.PreparedStatement.executeBatch(PreparedStatement.java:1281)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.springframework.jdbc.core.JdbcTemplate$4.doInPreparedStatement(JdbcTemplate.java:899)
+	at org.springframework.jdbc.core.JdbcTemplate$4.doInPreparedStatement(JdbcTemplate.java:1)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:587)
+	... 9 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'log_id' in 'field list'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:1777)
+	... 15 more
+2015-07-16 12:53:53,314 jdbc.JdbcService [Send message] com.viettel.synccontact.jdbc.JdbcService.insertContactDetail(JdbcService.java:91) [INFO ] - insert contact detail fail:[vt.vms.object.ContactVO@1f2e120]
+2015-07-16 12:53:53,314 jdbc.JdbcService [Send message] com.viettel.synccontact.jdbc.JdbcService.checkExists(JdbcService.java:74) [ERROR] - checkExists contact fail:
+org.springframework.dao.EmptyResultDataAccessException: Incorrect result size: expected 1, actual 0
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:71)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.queryForObject(NamedParameterJdbcTemplate.java:179)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.queryForObject(NamedParameterJdbcTemplate.java:191)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.queryForLong(NamedParameterJdbcTemplate.java:209)
+	at com.viettel.synccontact.jdbc.JdbcService.checkExists(JdbcService.java:71)
+	at com.viettel.synccontact.jdbc.JdbcService.insertContact(JdbcService.java:39)
+	at com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:210)
+	at com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:88)
+	at com.viettel.mmserver.base.ProcessThread.run(ProcessThread.java:126)
+	at java.lang.Thread.run(Thread.java:745)
+2015-07-16 12:53:53,376 jdbc.JdbcService [Send message] com.viettel.synccontact.jdbc.JdbcService.insertContactDetail(JdbcService.java:90) [ERROR] - insert contact detail fail:
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ insert into sf_guard_contact_detail (contact_id, phone, type, name_filter, user_id_filter, modify_time, status, log_id) values (8387911, ?, ?, ?, ?, NOW(), 1, 101)  ]; nested exception is java.sql.BatchUpdateException: Unknown column 'log_id' in 'field list'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:233)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:603)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:615)
+	at org.springframework.jdbc.core.JdbcTemplate.batchUpdate(JdbcTemplate.java:884)
+	at org.springframework.jdbc.core.namedparam.NamedParameterBatchUpdateUtils.executeBatchUpdateWithNamedParameters(NamedParameterBatchUpdateUtils.java:40)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.batchUpdate(NamedParameterJdbcTemplate.java:303)
+	at com.viettel.synccontact.jdbc.JdbcService.insertContactDetail(JdbcService.java:88)
+	at com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:217)
+	at com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:88)
+	at com.viettel.mmserver.base.ProcessThread.run(ProcessThread.java:126)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.BatchUpdateException: Unknown column 'log_id' in 'field list'
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:1819)
+	at com.mysql.jdbc.PreparedStatement.executeBatch(PreparedStatement.java:1281)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.springframework.jdbc.core.JdbcTemplate$4.doInPreparedStatement(JdbcTemplate.java:899)
+	at org.springframework.jdbc.core.JdbcTemplate$4.doInPreparedStatement(JdbcTemplate.java:1)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:587)
+	... 9 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'log_id' in 'field list'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:1777)
+	... 15 more
+2015-07-16 12:53:53,376 jdbc.JdbcService [Send message] com.viettel.synccontact.jdbc.JdbcService.insertContactDetail(JdbcService.java:91) [INFO ] - insert contact detail fail:[vt.vms.object.ContactVO@d0e237]
+2015-07-16 12:53:53,376 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:223) [INFO ] - Insert database success 3 contact.
+2015-07-16 12:53:53,385 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:224) [INFO ] - Remove Duplicate Contact
+2015-07-16 12:53:53,385 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:226) [INFO ] - Remove Contact detail:0 phone number.
+2015-07-16 12:53:53,401 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:228) [INFO ] - Remove Contact:0 contact.
+2015-07-16 12:53:53,401 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:89) [INFO ] - -----------------end 69624-----------------
+2015-07-16 12:56:09,837 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:87) [INFO ] - -----------------begin 69624-----------------
+2015-07-16 12:56:09,845 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:107) [INFO ] - Total contact of user 69624 is 3
+2015-07-16 12:56:09,846 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:204) [INFO ] - User 69624 has 3 contact valid
+2015-07-16 12:56:09,846 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:206) [INFO ] - insert Contact
+2015-07-16 12:57:16,745 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\database-mysql.properties]
+2015-07-16 12:57:16,745 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\amqp-source.properties]
+2015-07-16 12:57:32,903 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:87) [INFO ] - -----------------begin 69624-----------------
+2015-07-16 12:57:32,914 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:107) [INFO ] - Total contact of user 69624 is 3
+2015-07-16 12:57:32,914 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:204) [INFO ] - User 69624 has 3 contact valid
+2015-07-16 12:57:32,914 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:206) [INFO ] - insert Contact
+2015-07-16 12:57:33,383 jdbc.JdbcService [Send message] com.viettel.synccontact.jdbc.JdbcService.insertContactDetail(JdbcService.java:90) [ERROR] - insert contact detail fail:
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ insert into sf_guard_contact_logs_detail (contact_id, phone, type, name_filter, user_id_filter, modify_time, status, log_id) values (8387911, ?, ?, ?, ?, NOW(), 1, 103)  ]; nested exception is java.sql.BatchUpdateException: Table 'bkankh_test.sf_guard_contact_logs_detail' doesn't exist
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:233)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:603)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:615)
+	at org.springframework.jdbc.core.JdbcTemplate.batchUpdate(JdbcTemplate.java:884)
+	at org.springframework.jdbc.core.namedparam.NamedParameterBatchUpdateUtils.executeBatchUpdateWithNamedParameters(NamedParameterBatchUpdateUtils.java:40)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.batchUpdate(NamedParameterJdbcTemplate.java:303)
+	at com.viettel.synccontact.jdbc.JdbcService.insertContactDetail(JdbcService.java:88)
+	at com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:217)
+	at com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:88)
+	at com.viettel.mmserver.base.ProcessThread.run(ProcessThread.java:126)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.BatchUpdateException: Table 'bkankh_test.sf_guard_contact_logs_detail' doesn't exist
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:1819)
+	at com.mysql.jdbc.PreparedStatement.executeBatch(PreparedStatement.java:1281)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.springframework.jdbc.core.JdbcTemplate$4.doInPreparedStatement(JdbcTemplate.java:899)
+	at org.springframework.jdbc.core.JdbcTemplate$4.doInPreparedStatement(JdbcTemplate.java:1)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:587)
+	... 9 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'bkankh_test.sf_guard_contact_logs_detail' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:1777)
+	... 15 more
+2015-07-16 12:57:33,383 jdbc.JdbcService [Send message] com.viettel.synccontact.jdbc.JdbcService.insertContactDetail(JdbcService.java:91) [INFO ] - insert contact detail fail:[vt.vms.object.ContactVO@41297d]
+2015-07-16 12:57:33,398 jdbc.JdbcService [Send message] com.viettel.synccontact.jdbc.JdbcService.insertContactDetail(JdbcService.java:90) [ERROR] - insert contact detail fail:
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ insert into sf_guard_contact_logs_detail (contact_id, phone, type, name_filter, user_id_filter, modify_time, status, log_id) values (8387911, ?, ?, ?, ?, NOW(), 1, 103)  ]; nested exception is java.sql.BatchUpdateException: Table 'bkankh_test.sf_guard_contact_logs_detail' doesn't exist
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:233)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:603)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:615)
+	at org.springframework.jdbc.core.JdbcTemplate.batchUpdate(JdbcTemplate.java:884)
+	at org.springframework.jdbc.core.namedparam.NamedParameterBatchUpdateUtils.executeBatchUpdateWithNamedParameters(NamedParameterBatchUpdateUtils.java:40)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.batchUpdate(NamedParameterJdbcTemplate.java:303)
+	at com.viettel.synccontact.jdbc.JdbcService.insertContactDetail(JdbcService.java:88)
+	at com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:217)
+	at com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:88)
+	at com.viettel.mmserver.base.ProcessThread.run(ProcessThread.java:126)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.BatchUpdateException: Table 'bkankh_test.sf_guard_contact_logs_detail' doesn't exist
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:1819)
+	at com.mysql.jdbc.PreparedStatement.executeBatch(PreparedStatement.java:1281)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.springframework.jdbc.core.JdbcTemplate$4.doInPreparedStatement(JdbcTemplate.java:899)
+	at org.springframework.jdbc.core.JdbcTemplate$4.doInPreparedStatement(JdbcTemplate.java:1)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:587)
+	... 9 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'bkankh_test.sf_guard_contact_logs_detail' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:1777)
+	... 15 more
+2015-07-16 12:57:33,398 jdbc.JdbcService [Send message] com.viettel.synccontact.jdbc.JdbcService.insertContactDetail(JdbcService.java:91) [INFO ] - insert contact detail fail:[vt.vms.object.ContactVO@12687f7]
+2015-07-16 12:57:33,414 jdbc.JdbcService [Send message] com.viettel.synccontact.jdbc.JdbcService.insertContactDetail(JdbcService.java:90) [ERROR] - insert contact detail fail:
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ insert into sf_guard_contact_logs_detail (contact_id, phone, type, name_filter, user_id_filter, modify_time, status, log_id) values (8387911, ?, ?, ?, ?, NOW(), 1, 103)  ]; nested exception is java.sql.BatchUpdateException: Table 'bkankh_test.sf_guard_contact_logs_detail' doesn't exist
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:233)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:603)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:615)
+	at org.springframework.jdbc.core.JdbcTemplate.batchUpdate(JdbcTemplate.java:884)
+	at org.springframework.jdbc.core.namedparam.NamedParameterBatchUpdateUtils.executeBatchUpdateWithNamedParameters(NamedParameterBatchUpdateUtils.java:40)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.batchUpdate(NamedParameterJdbcTemplate.java:303)
+	at com.viettel.synccontact.jdbc.JdbcService.insertContactDetail(JdbcService.java:88)
+	at com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:217)
+	at com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:88)
+	at com.viettel.mmserver.base.ProcessThread.run(ProcessThread.java:126)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.BatchUpdateException: Table 'bkankh_test.sf_guard_contact_logs_detail' doesn't exist
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:1819)
+	at com.mysql.jdbc.PreparedStatement.executeBatch(PreparedStatement.java:1281)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297)
+	at org.springframework.jdbc.core.JdbcTemplate$4.doInPreparedStatement(JdbcTemplate.java:899)
+	at org.springframework.jdbc.core.JdbcTemplate$4.doInPreparedStatement(JdbcTemplate.java:1)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:587)
+	... 9 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'bkankh_test.sf_guard_contact_logs_detail' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
+	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:1777)
+	... 15 more
+2015-07-16 12:57:33,414 jdbc.JdbcService [Send message] com.viettel.synccontact.jdbc.JdbcService.insertContactDetail(JdbcService.java:91) [INFO ] - insert contact detail fail:[vt.vms.object.ContactVO@a5c144]
+2015-07-16 12:57:33,414 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:223) [INFO ] - Insert database success 3 contact.
+2015-07-16 12:57:33,414 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:224) [INFO ] - Remove Duplicate Contact
+2015-07-16 12:57:33,476 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:226) [INFO ] - Remove Contact detail:4 phone number.
+2015-07-16 12:57:33,492 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:228) [INFO ] - Remove Contact:0 contact.
+2015-07-16 12:57:33,492 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:89) [INFO ] - -----------------end 69624-----------------
+2015-07-16 12:59:40,535 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\database-mysql.properties]
+2015-07-16 12:59:40,551 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\amqp-source.properties]
+2015-07-16 12:59:51,136 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:87) [INFO ] - -----------------begin 69624-----------------
+2015-07-16 12:59:51,142 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:107) [INFO ] - Total contact of user 69624 is 3
+2015-07-16 12:59:51,142 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:204) [INFO ] - User 69624 has 3 contact valid
+2015-07-16 12:59:51,142 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:206) [INFO ] - insert Contact
+2015-07-16 12:59:51,830 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:223) [INFO ] - Insert database success 3 contact.
+2015-07-16 12:59:51,830 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:224) [INFO ] - Remove Duplicate Contact
+2015-07-16 12:59:51,861 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:226) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-16 12:59:51,861 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:228) [INFO ] - Remove Contact:0 contact.
+2015-07-16 12:59:51,861 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:89) [INFO ] - -----------------end 69624-----------------
+2015-07-16 13:00:15,450 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:87) [INFO ] - -----------------begin 69624-----------------
+2015-07-16 13:00:15,454 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:107) [INFO ] - Total contact of user 69624 is 3
+2015-07-16 13:00:15,455 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:204) [INFO ] - User 69624 has 3 contact valid
+2015-07-16 13:00:15,455 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:206) [INFO ] - insert Contact
+2015-07-16 13:00:15,643 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:223) [INFO ] - Insert database success 3 contact.
+2015-07-16 13:00:15,643 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:224) [INFO ] - Remove Duplicate Contact
+2015-07-16 13:00:15,690 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:226) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-16 13:00:15,690 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:228) [INFO ] - Remove Contact:0 contact.
+2015-07-16 13:00:15,690 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:89) [INFO ] - -----------------end 69624-----------------
+2015-07-16 13:00:32,626 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:87) [INFO ] - -----------------begin 69624-----------------
+2015-07-16 13:00:32,627 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:107) [INFO ] - Total contact of user 69624 is 3
+2015-07-16 13:00:32,627 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:204) [INFO ] - User 69624 has 3 contact valid
+2015-07-16 13:00:32,627 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:206) [INFO ] - insert Contact
+2015-07-16 13:00:46,501 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:223) [INFO ] - Insert database success 3 contact.
+2015-07-16 13:00:46,501 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:224) [INFO ] - Remove Duplicate Contact
+2015-07-16 13:00:46,548 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:226) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-16 13:00:46,548 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:228) [INFO ] - Remove Contact:0 contact.
+2015-07-16 13:00:46,548 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:89) [INFO ] - -----------------end 69624-----------------
+2015-07-16 13:00:55,921 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:87) [INFO ] - -----------------begin 69624-----------------
+2015-07-16 13:00:55,921 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:107) [INFO ] - Total contact of user 69624 is 3
+2015-07-16 13:00:55,922 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:204) [INFO ] - User 69624 has 3 contact valid
+2015-07-16 13:00:55,922 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:206) [INFO ] - insert Contact
+2015-07-16 13:00:56,156 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:223) [INFO ] - Insert database success 3 contact.
+2015-07-16 13:00:56,156 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:224) [INFO ] - Remove Duplicate Contact
+2015-07-16 13:00:56,187 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:226) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-16 13:00:56,187 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:228) [INFO ] - Remove Contact:0 contact.
+2015-07-16 13:00:56,187 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:89) [INFO ] - -----------------end 69624-----------------
+2015-07-16 13:01:11,703 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:87) [INFO ] - -----------------begin 69624-----------------
+2015-07-16 13:01:11,703 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:107) [INFO ] - Total contact of user 69624 is 3
+2015-07-16 13:01:11,704 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:204) [INFO ] - User 69624 has 3 contact valid
+2015-07-16 13:01:11,704 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:206) [INFO ] - insert Contact
+2015-07-16 13:11:16,181 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\database-mysql.properties]
+2015-07-16 13:11:16,181 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\amqp-source.properties]
+2015-07-16 13:11:16,884 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:87) [INFO ] - -----------------begin 69624-----------------
+2015-07-16 13:11:16,901 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:107) [INFO ] - Total contact of user 69624 is 3
+2015-07-16 13:11:16,901 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:204) [INFO ] - User 69624 has 3 contact valid
+2015-07-16 13:11:16,901 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:206) [INFO ] - insert Contact
+2015-07-16 13:11:17,401 jdbc.JdbcService [Send message] com.viettel.synccontact.jdbc.JdbcService.updateContactLog(JdbcService.java:124) [ERROR] - updateContactLog fail:
+java.lang.NullPointerException
+	at com.viettel.synccontact.jdbc.JdbcService.updateContactLog(JdbcService.java:121)
+	at com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:223)
+	at com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:88)
+	at com.viettel.mmserver.base.ProcessThread.run(ProcessThread.java:126)
+	at java.lang.Thread.run(Thread.java:745)
+2015-07-16 13:11:17,401 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:224) [INFO ] - Insert database success 3 contact.
+2015-07-16 13:11:17,401 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:225) [INFO ] - Remove Duplicate Contact
+2015-07-16 13:11:17,448 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:227) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-16 13:11:17,448 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:229) [INFO ] - Remove Contact:0 contact.
+2015-07-16 13:11:17,448 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:89) [INFO ] - -----------------end 69624-----------------
+2015-07-16 13:11:54,053 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:87) [INFO ] - -----------------begin 69624-----------------
+2015-07-16 13:11:54,057 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:107) [INFO ] - Total contact of user 69624 is 3
+2015-07-16 13:11:54,058 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:204) [INFO ] - User 69624 has 3 contact valid
+2015-07-16 13:11:54,058 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:206) [INFO ] - insert Contact
+2015-07-16 13:13:45,904 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\database-mysql.properties]
+2015-07-16 13:13:45,904 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\amqp-source.properties]
+2015-07-16 13:14:03,494 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:87) [INFO ] - -----------------begin 69624-----------------
+2015-07-16 13:14:03,501 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:107) [INFO ] - Total contact of user 69624 is 3
+2015-07-16 13:14:03,501 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:204) [INFO ] - User 69624 has 3 contact valid
+2015-07-16 13:14:03,501 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:206) [INFO ] - insert Contact
+2015-07-16 13:14:04,345 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:224) [INFO ] - Insert database success 3 contact.
+2015-07-16 13:14:04,345 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:225) [INFO ] - Remove Duplicate Contact
+2015-07-16 13:14:04,377 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:227) [INFO ] - Remove Contact detail:6 phone number.
+2015-07-16 13:14:04,377 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:229) [INFO ] - Remove Contact:0 contact.
+2015-07-16 13:14:04,377 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:89) [INFO ] - -----------------end 69624-----------------
+2015-07-16 13:43:18,067 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\database-mysql.properties]
+2015-07-16 13:43:18,067 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\amqp-source.properties]
+2015-07-16 13:47:27,456 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:87) [INFO ] - -----------------begin 69624-----------------
+2015-07-16 13:47:27,464 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:107) [INFO ] - Total contact of user 69624 is 3
+2015-07-16 13:47:27,464 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:204) [INFO ] - User 69624 has 3 contact valid
+2015-07-16 13:47:27,464 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:206) [INFO ] - insert Contact
+2015-07-16 13:47:51,960 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:224) [INFO ] - Insert database success 3 contact.
+2015-07-16 13:47:51,960 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:225) [INFO ] - Remove Duplicate Contact
+2015-07-16 13:47:51,970 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:227) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-16 13:47:51,970 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:229) [INFO ] - Remove Contact:0 contact.
+2015-07-16 13:47:51,970 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:89) [INFO ] - -----------------end 69624-----------------
+2015-07-16 13:48:00,951 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:87) [INFO ] - -----------------begin 69624-----------------
+2015-07-16 13:48:00,953 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:107) [INFO ] - Total contact of user 69624 is 3
+2015-07-16 13:48:00,954 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:204) [INFO ] - User 69624 has 3 contact valid
+2015-07-16 13:48:00,954 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:206) [INFO ] - insert Contact
+2015-07-16 13:48:14,399 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:224) [INFO ] - Insert database success 3 contact.
+2015-07-16 13:48:14,399 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:225) [INFO ] - Remove Duplicate Contact
+2015-07-16 13:48:14,447 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:227) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-16 13:48:14,447 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:229) [INFO ] - Remove Contact:0 contact.
+2015-07-16 13:48:14,447 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:89) [INFO ] - -----------------end 69624-----------------
+2015-07-16 13:48:30,689 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:87) [INFO ] - -----------------begin 69624-----------------
+2015-07-16 13:48:30,689 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:107) [INFO ] - Total contact of user 69624 is 3
+2015-07-16 13:48:30,690 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:204) [INFO ] - User 69624 has 3 contact valid
+2015-07-16 13:48:30,690 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:206) [INFO ] - insert Contact
+2015-07-16 13:49:10,071 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:224) [INFO ] - Insert database success 3 contact.
+2015-07-16 13:49:10,071 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:225) [INFO ] - Remove Duplicate Contact
+2015-07-16 13:49:10,090 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:227) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-16 13:49:10,090 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:229) [INFO ] - Remove Contact:0 contact.
+2015-07-16 13:49:10,090 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:89) [INFO ] - -----------------end 69624-----------------
+2015-07-16 13:49:17,058 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:87) [INFO ] - -----------------begin 69624-----------------
+2015-07-16 13:49:17,070 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:107) [INFO ] - Total contact of user 69624 is 3
+2015-07-16 13:49:17,070 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:204) [INFO ] - User 69624 has 3 contact valid
+2015-07-16 13:49:17,070 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:206) [INFO ] - insert Contact
+2015-07-16 13:49:58,908 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:224) [INFO ] - Insert database success 3 contact.
+2015-07-16 13:49:58,908 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:225) [INFO ] - Remove Duplicate Contact
+2015-07-16 13:49:58,953 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:227) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-16 13:49:58,953 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:229) [INFO ] - Remove Contact:0 contact.
+2015-07-16 13:49:58,953 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:89) [INFO ] - -----------------end 69624-----------------
+2015-07-16 13:50:14,661 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:87) [INFO ] - -----------------begin 69624-----------------
+2015-07-16 13:50:14,668 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:107) [INFO ] - Total contact of user 69624 is 3
+2015-07-16 13:50:14,669 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:204) [INFO ] - User 69624 has 3 contact valid
+2015-07-16 13:50:14,669 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:206) [INFO ] - insert Contact
+2015-07-16 13:52:17,743 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\database-mysql.properties]
+2015-07-16 13:52:17,743 utils.PropertyHolder [main] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:177) [INFO ] - Loading properties file from file [E:\PROJECT\QT06_15029_PHONESAFE\06.SOURCE\Draft\phonesafe\tien-trinh\SyncContact\target\..\etc\properties\amqp-source.properties]
+2015-07-16 13:52:40,972 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:87) [INFO ] - -----------------begin 69624-----------------
+2015-07-16 13:52:40,976 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:107) [INFO ] - Total contact of user 69624 is 3
+2015-07-16 13:52:40,976 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:204) [INFO ] - User 69624 has 3 contact valid
+2015-07-16 13:52:40,976 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:206) [INFO ] - insert Contact
+2015-07-16 13:52:41,601 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:224) [INFO ] - Insert database success 3 contact.
+2015-07-16 13:52:41,601 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:225) [INFO ] - Remove Duplicate Contact
+2015-07-16 13:52:41,616 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:227) [INFO ] - Remove Contact detail:4 phone number.
+2015-07-16 13:52:41,616 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:229) [INFO ] - Remove Contact:0 contact.
+2015-07-16 13:52:41,616 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:89) [INFO ] - -----------------end 69624-----------------
+2015-07-16 13:52:46,567 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:87) [INFO ] - -----------------begin 69624-----------------
+2015-07-16 13:52:46,570 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:107) [INFO ] - Total contact of user 69624 is 3
+2015-07-16 13:52:46,571 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:204) [INFO ] - User 69624 has 3 contact valid
+2015-07-16 13:52:46,571 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:206) [INFO ] - insert Contact
+2015-07-16 13:52:47,117 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:224) [INFO ] - Insert database success 3 contact.
+2015-07-16 13:52:47,117 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:225) [INFO ] - Remove Duplicate Contact
+2015-07-16 13:52:47,117 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:227) [INFO ] - Remove Contact detail:3 phone number.
+2015-07-16 13:52:47,117 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.syncContact(SyncProcess.java:229) [INFO ] - Remove Contact:0 contact.
+2015-07-16 13:52:47,117 manager.SyncProcess [Send message] com.viettel.synccontact.manager.SyncProcess.process(SyncProcess.java:89) [INFO ] - -----------------end 69624-----------------
