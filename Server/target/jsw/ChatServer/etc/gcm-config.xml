@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rabbit="http://www.springframework.org/schema/rabbit"
+	xmlns:int="http://www.springframework.org/schema/integration"
+	xmlns:int-jdbc="http://www.springframework.org/schema/integration/jdbc"
+	xmlns:int-amqp="http://www.springframework.org/schema/integration/amqp"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+                http://www.springframework.org/schema/rabbit http://www.springframework.org/schema/rabbit/spring-rabbit-1.0.xsd
+		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd
+		http://www.springframework.org/schema/integration/jdbc http://www.springframework.org/schema/integration/jdbc/spring-integration-jdbc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd 
+                http://www.springframework.org/schema/integration/amqp http://www.springframework.org/schema/integration/amqp/spring-integration-amqp.xsd
+                http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd
+                http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd"
+	xmlns:aop="http://www.springframework.org/schema/aop">
+
+	<rabbit:queue name="${queue.name.gcm}" />
+	<int-amqp:inbound-channel-adapter
+		connection-factory="connectionFactory" channel="input-gcm-channel"
+		queue-names="${queue.name.gcm}" message-converter="jsonConverter"
+		acknowledge-mode="NONE" />
+
+	<int:channel id="input-gcm-channel">
+		<int:queue />
+	</int:channel>
+
+	<bean class="com.viettel.gcm.manager.SendGCMProcess"
+		init-method="getInstance">
+		<property name="inputChannel" ref="input-gcm-channel" />
+		<property name="gcmServer" ref="gcmInstance" />
+	</bean>
+
+	<bean name="gcmInstance" class="com.viettel.gcm.util.GCM">
+		<property name="senderId" value="${root.gcm.senderid}" />
+		<property name="senderIdNew" value="${root.gcm.senderid_new}" />
+	</bean>
+
+</beans>
